@@ -4,21 +4,22 @@ import Emoji from '../components/Emoji.astro';
 ---
 
 <style lang="scss">
-	@use 'sass:map';
-	@use '../scss/variables';
+	@use '../scss/spacing';
 	@use '../scss/breakpoints';
 
 	.hero-wrap {
 		width: 100%;
-		margin-bottom: map.get(variables.$spacers, 4);
+
+		@include spacing.mb(5);
 
 		@include breakpoints.up('md') {
-			margin-bottom: 48px;
+			@include spacing.mb(6);
 		}
 
 		@include breakpoints.up('lg') {
 			width: 75%;
-			margin-bottom: 64px;
+			
+			@include spacing.mb(7);
 		}
 	}
 
@@ -26,8 +27,9 @@ import Emoji from '../components/Emoji.astro';
 		font-family: 'PT Serif', serif;
 		font-size: 40px;
 		font-weight: 400;
-		margin: 0;
 		line-height: 1.2;
+		
+		@include spacing.m(0);
 
 		@include breakpoints.up('sm') {
 			font-size: 48px;

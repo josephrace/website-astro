@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$container: 1140px;
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.5,
+  2: $spacer,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
+  6: $spacer * 3,
+  7: $spacer * 4,
+);
+
+@mixin m($size) {
+  margin: map.get($spacers, $size);
+}
+
+@mixin mb($size) {
+  margin-bottom: map.get($spacers, $size);
+}
+
+@mixin px($size) {
+  padding: 0 map.get($spacers, $size);
+}
+
+@mixin py($size) {
+  padding: map.get($spacers, $size) 0;
+}

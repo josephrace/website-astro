@@ -3,16 +3,16 @@ import Emoji from './Emoji.astro';
 ---
 
 <style lang="scss">
-  @use "sass:map";
-  @use '../scss/variables';
+  @use '../scss/spacing';
   @use '../scss/breakpoints';
 
   footer {
-    margin: map.get(variables.$spacers, 3) 0;
     font-size: 14px;
     
+    @include spacing.py(3);
+    
     @include breakpoints.up('md') {
-      margin: map.get(variables.$spacers, 4) 0;
+      @include spacing.py(4);
     }
   }
 

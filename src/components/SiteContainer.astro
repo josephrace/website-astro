@@ -1,14 +1,14 @@
 <style lang="scss">
-  @use 'sass:map';
-  @use '../scss/variables';
+  @use '../scss/spacing';
 
   div {
-    max-width: variables.$container-width;
+    max-width: spacing.$container;
     margin: 0 auto;
-    padding: 0 map.get(variables.$spacers, 2);
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+    
+    @include spacing.px(2);
 	}
 </style>
 
