@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Container from '../components/Container.astro';
 import Emoji from '../components/Emoji.astro';
 ---
 
@@ -53,12 +52,10 @@ import Emoji from '../components/Emoji.astro';
 </style>
 
 <BaseLayout title="Full-Stack Developer">
-	<Container>
-		<div class="hero-wrap">
-			<h1 class="hero">
-				Sustainable <Emoji label="tree">🌳</Emoji> accessible inclusive <Emoji label="squid">🦑</Emoji> impactful equal open <Emoji label="avocado">🥑</Emoji>
-			</h1>
-		</div>
-		<p>Full-Stack Developer driven by working on projects with purpose — from helping charities reach their audiences to providing tools for aspiring musicians.</p>
-	</Container>
+	<div class="hero-wrap">
+		<h1 class="hero">
+			Sustainable <Emoji label="tree">🌳</Emoji> accessible inclusive <Emoji label="squid">🦑</Emoji> impactful equal open <Emoji label="avocado">🥑</Emoji>
+		</h1>
+	</div>
+	<p>Full-Stack Developer driven by working on projects with purpose — from helping charities reach their audiences to providing tools for aspiring musicians.</p>
 </BaseLayout>
