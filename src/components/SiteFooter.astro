@@ -1,0 +1,25 @@
+---
+import Container from './Container.astro';
+import Emoji from './Emoji.astro';
+---
+
+<style lang="scss">
+  @use "sass:map";
+  @use '../scss/variables';
+  @use '../scss/breakpoints';
+
+  footer {
+    margin: map.get(variables.$spacers, 3) 0;
+    font-size: 14px;
+    
+    @include breakpoints.up('md') {
+      margin: map.get(variables.$spacers, 4) 0;
+    }
+  }
+</style>
+
+<footer>
+  <Container>
+    <Emoji label="detective">🕵🏻‍♂️</Emoji> Find me on <a href="https://github.com/josephrace">Github</a>, <a href="https://stackoverflow.com/users/1391229/josephrace">Stack Overflow</a> or <a href="https://www.linkedin.com/in/josephrace">LinkedIn</a>
+  </Container>
+</footer>

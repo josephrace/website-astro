@@ -1,16 +1,64 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Emoji from '../components/Emoji.astro';
 ---
-<html lang="en">
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Welcome to Astro</title>
-</head>
+<style lang="scss">
+	@use 'sass:map';
+	@use '../scss/variables';
+	@use '../scss/breakpoints';
 
-<body>
-	<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-</body>
+	.hero-wrap {
+		width: 100%;
+		margin-bottom: map.get(variables.$spacers, 4);
 
-</html>
+		@include breakpoints.up('md') {
+			margin-bottom: 48px;
+		}
+
+		@include breakpoints.up('lg') {
+			width: 75%;
+			margin-bottom: 64px;
+		}
+	}
+
+	.hero {
+		font-family: 'PT Serif', serif;
+		font-size: 40px;
+		font-weight: 400;
+		margin: 0;
+		line-height: 1.2;
+
+		@include breakpoints.up('sm') {
+			font-size: 48px;
+		}
+
+		@include breakpoints.up('md') {
+			font-size: 64px;
+		}
+		
+		@include breakpoints.up('lg') {
+			font-size: 72px;
+		}
+	}
+
+	p {
+		width: 100%;
+
+		@include breakpoints.up('lg') {
+			width: 50%;
+		}
+	}
+</style>
+
+<BaseLayout title="Full-Stack Developer">
+	<Container>
+		<div class="hero-wrap">
+			<h1 class="hero">
+				Sustainable <Emoji label="tree">🌳</Emoji> accessible inclusive <Emoji label="squid">🦑</Emoji> impactful equal open <Emoji label="avocado">🥑</Emoji>
+			</h1>
+		</div>
+		<p>Full-Stack Developer driven by working on projects with purpose — from helping charities reach their audiences to providing tools for aspiring musicians.</p>
+	</Container>
+</BaseLayout>

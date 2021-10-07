@@ -1,0 +1,68 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const { title } = Astro.props;
+---
+
+<style global>
+	* {
+		box-sizing: border-box;
+	}
+	html {
+		--text-color: #111;
+		--bg-color: #fafafa;
+	}
+	html.dark {
+		--text-color: #dadada;
+		--bg-color: #111;
+	}
+	body {
+		margin: 0;
+		font-family: sans-serif;
+		color: var(--text-color);
+		background-color: var(--bg-color);
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	a {
+		color: var(--text-color);
+	}
+</style>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	main {
+		flex: 1;
+	}
+</style>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦑</text></svg>" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title} - Joseph Race</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+		<script>
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.getElementsByTagName('html')[0].classList.add('dark');
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<SiteHeader />
+			<main>
+				<slot />
+			</main>
+			<SiteFooter />
+		</div>
+	</body>
+</html>

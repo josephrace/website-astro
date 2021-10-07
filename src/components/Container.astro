@@ -1,0 +1,14 @@
+<style lang="scss">
+  @use 'sass:map';
+  @use '../scss/variables';
+
+  div {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    padding: 0 map.get(variables.$spacers, 2);
+  }
+</style>
+
+<div>
+  <slot />
+</div>

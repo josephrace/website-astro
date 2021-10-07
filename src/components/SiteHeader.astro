@@ -1,0 +1,23 @@
+---
+import Container from './Container.astro';
+---
+
+<style lang="scss">
+  @use "sass:map";
+  @use '../scss/variables';
+  @use '../scss/breakpoints';
+
+  header {
+    margin: map.get(variables.$spacers, 3) 0;
+
+    @include breakpoints.up('md') {
+      margin: map.get(variables.$spacers, 4) 0;
+    }
+	}
+</style>
+
+<header>
+  <Container>
+    Joseph Race
+  </Container>
+</header>
