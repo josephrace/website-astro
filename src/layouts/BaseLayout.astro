@@ -3,31 +3,40 @@ import SiteContainer from '../components/SiteContainer.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 
-const { title } = Astro.props;
+export interface Props {
+	title?: string;
+}
+
+const { title = 'Full-Stack Developer' } = Astro.props;
 ---
 
-<style global>
+<style global lang="scss">
+	@use '../scss/type';
+	@use '../scss/spacing';
+	@use '../scss/colors';
+
 	* {
 		box-sizing: border-box;
 	}
 
 	html {
-		--text-color: #111;
-		--bg-color: #fafafa;
+		--text-color: #{colors.$text-dark};
+		--bg-color: #{colors.$bg-light};
 	}
 
 	html.dark {
-		--text-color: #dadada;
-		--bg-color: #111;
+		--text-color: #{colors.$text-light};
+		--bg-color: #{colors.$bg-dark};
 	}
 	
 	body {
-		margin: 0;
-		font-family: sans-serif;
-		color: var(--text-color);
+		font-family: type.$font-family-base;
+		font-size: type.$font-size-base;
+		line-height: type.$line-height;
 		background-color: var(--bg-color);
-		font-size: 16px;
-		line-height: 1.6;
+		color: var(--text-color);
+
+		@include spacing.m(0);
 	}
 </style>
 

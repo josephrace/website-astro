@@ -1,0 +1,48 @@
+<style lang="scss">
+  @use '../scss/spacing';
+	@use '../scss/breakpoints';
+	@use '../scss/type';
+
+  div {
+		width: 100%;
+
+		@include spacing.mb(5);
+
+		@include breakpoints.up('md') {
+			@include spacing.mb(6);
+		}
+
+		@include breakpoints.up('lg') {
+			width: 75%;
+			
+			@include spacing.mb(7);
+		}
+	}
+
+	h1 {
+		font-family: type.$font-family-serif;
+		font-weight: type.$font-weight-normal;
+		font-size: 40px;
+		line-height: 1.2;
+		
+		@include spacing.m(0);
+
+		@include breakpoints.up('sm') {
+			font-size: 48px;
+		}
+
+		@include breakpoints.up('md') {
+			font-size: 64px;
+		}
+		
+		@include breakpoints.up('lg') {
+			font-size: 72px;
+		}
+	}
+</style>
+
+<div>
+  <h1>
+    <slot />
+  </h1>
+</div>

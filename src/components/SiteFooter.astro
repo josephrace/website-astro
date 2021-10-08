@@ -5,9 +5,10 @@ import Emoji from './Emoji.astro';
 <style lang="scss">
   @use '../scss/spacing';
   @use '../scss/breakpoints';
+  @use '../scss/type';
 
   footer {
-    font-size: 14px;
+    font-size: type.$font-size-sm;
     
     @include spacing.py(3);
     

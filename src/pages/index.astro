@@ -1,48 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Emoji from '../components/Emoji.astro';
+import PageTitle from '../components/PageTitle.astro';
 ---
 
 <style lang="scss">
-	@use '../scss/spacing';
 	@use '../scss/breakpoints';
-
-	.hero-wrap {
-		width: 100%;
-
-		@include spacing.mb(5);
-
-		@include breakpoints.up('md') {
-			@include spacing.mb(6);
-		}
-
-		@include breakpoints.up('lg') {
-			width: 75%;
-			
-			@include spacing.mb(7);
-		}
-	}
-
-	.hero {
-		font-family: 'PT Serif', serif;
-		font-size: 40px;
-		font-weight: 400;
-		line-height: 1.2;
-		
-		@include spacing.m(0);
-
-		@include breakpoints.up('sm') {
-			font-size: 48px;
-		}
-
-		@include breakpoints.up('md') {
-			font-size: 64px;
-		}
-		
-		@include breakpoints.up('lg') {
-			font-size: 72px;
-		}
-	}
 
 	p {
 		width: 100%;
@@ -53,11 +16,9 @@ import Emoji from '../components/Emoji.astro';
 	}
 </style>
 
-<BaseLayout title="Full-Stack Developer">
-	<div class="hero-wrap">
-		<h1 class="hero">
-			Sustainable <Emoji label="tree">🌳</Emoji> accessible inclusive <Emoji label="squid">🦑</Emoji> impactful equal open <Emoji label="avocado">🥑</Emoji>
-		</h1>
-	</div>
+<BaseLayout>
+	<PageTitle>
+		Sustainable <Emoji label="tree">🌳</Emoji> accessible inclusive <Emoji label="squid">🦑</Emoji> impactful equal open <Emoji label="avocado">🥑</Emoji>
+	</PageTitle>
 	<p>Full-Stack Developer driven by working on projects with purpose — from helping charities reach their audiences to providing tools for aspiring musicians.</p>
 </BaseLayout>
