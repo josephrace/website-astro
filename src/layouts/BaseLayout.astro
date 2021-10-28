@@ -24,9 +24,11 @@ const { title = 'Full-Stack Developer' } = Astro.props;
     --bg-color: #{colors.$bg-light};
   }
 
-  html.dark {
-    --text-color: #{colors.$text-light};
-    --bg-color: #{colors.$bg-dark};
+  @media (prefers-color-scheme: dark) {
+    html {
+      --text-color: #{colors.$text-light};
+      --bg-color: #{colors.$bg-dark};
+    }
   }
   
   body {
@@ -55,11 +57,6 @@ const { title = 'Full-Stack Developer' } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap&text=abcefilmnopqstuvS" rel="stylesheet">
-    <script>
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.getElementsByTagName('html')[0].classList.add('dark');
-      }
-    </script>
   </head>
   <body>
     <SiteContainer>
