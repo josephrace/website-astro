@@ -10,6 +10,9 @@
     "check": "astro check"
   },
   "devDependencies": {
-    "astro": "^0.20.12"
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "astro": "^0.20.12",
+    "husky": "^7.0.4"
   }
 }
