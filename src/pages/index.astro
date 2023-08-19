@@ -1,10 +1,14 @@
 ---
+import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="race.dev">
+<Layout title="Joseph Race">
   <main>
-    <h1>race.dev</h1>
+    <div class="logo">
+      <Icon name="ph:tree" size="32" />
+      <h1>Joseph Race</h1>
+    </div>
     <p class="intro">Hi, I'm a software engineer working in climate tech.</p>
     <p>
       Currently at <a href="https://ecologi.com" target="_blank" rel="noopener noreferrer"
@@ -28,6 +32,14 @@ import Layout from "../layouts/Layout.astro";
     margin: auto;
     padding: 1.5rem;
     max-width: 70ch;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  [astro-icon] {
+    color: #fff;
+    margin-right: 1rem;
   }
   h1 {
     font-size: 1rem;
