@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Joseph Race">
   <main>
     <div class="logo">
-      <Icon name="ph:tree" size="32" />
+      <Icon name="lucide:tent-tree" size="32" />
       <h1>Joseph Race</h1>
     </div>
     <p class="intro">Hi, I'm a software engineer working in climate tech.</p>
@@ -37,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     align-items: center;
   }
-  [astro-icon] {
+  [data-icon] {
     margin-right: 1rem;
   }
   h1 {
