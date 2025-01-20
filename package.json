@@ -12,7 +12,7 @@
   "dependencies": {
     "@fontsource/roboto-mono": "^5.1.0",
     "@iconify-json/lucide": "^1.2.18",
-    "astro": "^5.0.5",
+    "astro": "^5.1.7",
     "astro-icon": "^1.1.4"
   }
 }
