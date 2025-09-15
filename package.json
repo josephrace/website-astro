@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/roboto-mono": "^5.2.6",
+    "@fontsource/roboto-mono": "^5.2.7",
     "@iconify-json/lucide": "^1.2.67",
     "astro": "^5.13.1",
     "astro-icon": "^1.1.4"
