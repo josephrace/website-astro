@@ -1,10 +1,10 @@
 # AGENTS.md
 
-Personal website built with Astro v5 (fully static, no SSR adapter, no UI framework).
+Personal website built with Astro v6 (fully static, no SSR adapter, no UI framework).
 
 ## Package manager
 
-Use **npm** only. Lockfile is `package-lock.json` (lockfileVersion 2, requires npm v7+). Node v20 (see `.nvmrc`).
+Use **npm** only. Lockfile is `package-lock.json` (lockfileVersion 2, requires npm v7+). Node v22 (see `.nvmrc`); Astro v6 requires `>=22.12.0`.
 
 ## Commands
 
